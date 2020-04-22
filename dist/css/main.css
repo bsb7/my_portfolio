@@ -1,3 +1,87 @@
-body {
-  background-color: red;
-  color: yellow; }
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, "Geneva", Verdana, "sans-serif";
+  letter-spacing: 5px; }
+
+#home {
+  height: 100vh; }
+  #home nav {
+    padding: 2rem 0 2rem 10rem;
+    font-size: 1.2em;
+    position: fixed;
+    width: 100vw; }
+    #home nav .menu_item {
+      display: inline;
+      padding-right: 2em; }
+    #home nav .menu_link {
+      text-decoration: none;
+      outline: none;
+      border: none;
+      font-weight: bold;
+      color: #72BDC0; }
+      #home nav .menu_link:hover {
+        color: #13292a;
+        transition: 0.5s ease-in; }
+  #home #main_content {
+    height: inherit;
+    padding-top: 30vh; }
+    #home #main_content section {
+      margin-left: 10rem; }
+      #home #main_content section h1 {
+        font-size: 7rem; }
+        #home #main_content section h1 span {
+          color: #72BDC0; }
+      #home #main_content section h3 {
+        font-size: 1.5rem;
+        font-weight: lighter;
+        margin-left: 6px; }
+    #home #main_content #button_selector {
+      letter-spacing: 1em;
+      margin-left: 10rem;
+      padding: 3rem 0; }
+      #home #main_content #button_selector a {
+        border: 1px solid #13292a;
+        border-radius: 10px;
+        padding: 1.5rem 5rem;
+        text-decoration: none;
+        outline: none;
+        border: none;
+        font-size: 1.5rem;
+        font-weight: bolder; }
+      #home #main_content #button_selector #work_button {
+        color: #ffffff;
+        background-color: #72BDC0;
+        border: 1px solid #ffffff; }
+        #home #main_content #button_selector #work_button:hover {
+          color: #72BDC0;
+          background-color: #ffffff;
+          border: 1px solid #72BDC0;
+          transition: 0.5s ease-in; }
+      #home #main_content #button_selector #contact_button {
+        color: #72BDC0;
+        background-color: #ffffff;
+        border: 1px solid #72BDC0; }
+        #home #main_content #button_selector #contact_button:hover {
+          color: #ffffff;
+          background-color: #72BDC0;
+          border: 1px solid #ffffff;
+          transition: 0.5s ease-in; }
+
+#my_work {
+  height: 80vh;
+  padding: 10vh 5vh; }
+  #my_work section {
+    height: 85vh;
+    border: 1px solid teal;
+    border-radius: 15px;
+    overflow-x: scroll; }
+
+#contact {
+  height: 80vh;
+  padding: 10vh 5vh; }
+  #contact section {
+    height: 85vh;
+    border: 1px solid teal;
+    border-radius: 15px;
+    overflow-x: scroll; }

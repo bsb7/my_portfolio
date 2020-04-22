@@ -1,7 +1,135 @@
-$primary-color: red;
-$secondary-color:yellow;
+$cream: #e7ded9;
+$teal:#13292a;
+$opposite_teal: #b0534f;
+$white: #ffffff;
+$taupe: #988780;
 
-body{
-    background-color: $primary-color;
-    color:$secondary-color;
+// pallette
+$palette1:#4FACB0;
+$palette2:#72BDC0;
+$palette3:#B0534F;
+$palette4:#C07572;
+$palette5:#f0220f;
+$palette6:#F34E3F;
+@mixin separator{
+    border-bottom: 1em solid $teal;
+}
+@mixin removeLinkStyle{
+    text-decoration: none;
+    outline: none;
+    border: none;
+    // color: #000000;
+}
+@mixin section_default_style {
+    height: 85vh;
+    border: 1px solid teal;
+    border-radius: 15px;
+    overflow-x: scroll;
+}
+@mixin default_section_heigh_padding {
+    height: 80vh;
+    padding:10vh 5vh;
+}
+*{
+    padding: 0;
+    margin:0;
+    font-family: "Segoe UI", Tahoma, "Geneva", Verdana, "sans-serif";
+    letter-spacing: 5px;
+}
+#home{
+    height: 100vh;
+    nav{
+        // margin-left: 10rem;
+        padding: 2rem 0 2rem 10rem;
+        font-size: 1.2em;
+        position: fixed;
+        // background-color: $cream;
+        width: 100vw;
+        .menu_item{
+            display: inline;
+            padding-right:2em ;
+        }
+        .menu_link{
+           @include removeLinkStyle();
+            font-weight: bold;
+            color: $palette2;
+            // padding:0 1em;
+            &:hover{
+                color: $teal;
+                transition: 0.5s ease-in;
+            }
+        }
+    }
+    #main_content{
+        // margin-left: 7rem;
+        // padding
+        // background-color: red;
+        height: inherit;
+        padding-top: 30vh;
+        section{
+            margin-left: 10rem;
+            // background-color: $cream;
+            h1{
+                font-size: 7rem;
+                span{
+                    color: $palette2;
+                }
+            }
+            h3{
+                font-size: 1.5rem;
+                font-weight: lighter;
+                margin-left: 6px;
+            }
+        }
+        #button_selector{
+            letter-spacing: 1em;
+            margin-left: 10rem;
+            // border:1px solid $teal;
+            padding: 3rem 0;
+            a{
+                border: 1px solid $teal;
+                border-radius: 10px;
+                padding:1.5rem 5rem;
+                @include removeLinkStyle();
+                font-size: 1.5rem;
+                font-weight: bolder;
+            }
+            #work_button{
+                color: $white;
+                background-color: $palette2;
+                border:1px solid $white;
+                &:hover{
+                    color: $palette2;
+                    background-color: $white;
+                    border:1px solid $palette2;
+                    transition: 0.5s ease-in;
+                }
+            }
+            #contact_button{
+                color: $palette2;
+                background-color: $white;
+                border:1px solid $palette2;
+                &:hover{
+                    color: $white;
+                    background-color: $palette2;
+                    border:1px solid $white;    
+                    transition: 0.5s ease-in;
+                }
+            }
+        }
+    }
+}
+
+#my_work{
+    @include default_section_heigh_padding();
+    section{
+        @include section_default_style();
+    }
+    // background-color: $palette4;
+}
+#contact{
+    @include default_section_heigh_padding();    
+    section{
+        @include section_default_style();
+    }
 }
