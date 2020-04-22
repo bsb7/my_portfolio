@@ -1,0 +1,15 @@
+{
+  "name": "my_own_design_portfolio",
+  "version": "1.0.0",
+  "description": "resonsive portfolio ",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "keywords": [
+    "bernadette",
+    "breboneria"
+  ],
+  "author": "bernadette breboneria",
+  "license": "MIT"
+}
